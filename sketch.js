@@ -3,7 +3,7 @@ const World= Matter.World;
 const Bodies = Matter.Bodies;
 
 var engine, world;
-var stone, rubber,hammer;
+var stone, bouncyBall,hammer;
 
 function setup(){
     var canvas = createCanvas(1200,600);
@@ -14,10 +14,11 @@ function setup(){
     iron = new Iron(300,350);
     stone = new Stone(700,320,100,100);
   
-     rubber=new Rubber(900,450,70);
-    // rubber=Rubber(900,450,70);
-    // rubber=new (900,450,70);
-    // rubber=new Rubber();
+    bouncyBall=new BouncyBall(900,450,70);
+    // bouncyBall=BouncyBall(900,450,70);
+    // bouncyBall=new (900,450,70);
+    // bouncyBall=new BouncyBall();
+
     hammer = new Hammer(10,100);
 }
 
@@ -28,7 +29,7 @@ function draw(){
     stone.display();
     plane.display();
    
-    rubber.display();
+    bouncyBall.display();
     iron.display()  
     hammer.display();
 
